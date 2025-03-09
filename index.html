@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web với Lightbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chào mừng đến với trang web của tôi!</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Giới Thiệu</h2>
+            <p>Đây là một trang web đơn giản được tạo bằng HTML, CSS và JavaScript.</p>
+        </section>
+
+        <section>
+            <h2>Gallery Hình Ảnh</h2>
+            <div class="gallery">
+                <!-- Các ảnh nhỏ -->
+                <img src="images/1.png" alt="Hình ảnh 1" onclick="openLightbox('images/1.png')">
+                <img src="images/2.jpg" alt="Hình ảnh 2" onclick="openLightbox('images/2.jpg')">
+                <img src="images/3.jpg" alt="Hình ảnh 3" onclick="openLightbox('images/3.jpg')">
+                <img src="images/4.jpg" alt="Hình ảnh 4" onclick="openLightbox('images/4.jpg')">
+                <img src="images/5.jpeg" alt="Hình ảnh 5" onclick="openLightbox('images/5.jpeg')">
+                <img src="images/6.jpeg" alt="Hình ảnh 6" onclick="openLightbox('images/6.jpeg')">
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - By Windily</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

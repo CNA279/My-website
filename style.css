@@ -1,0 +1,125 @@
+/* Thiết lập chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(135deg, #ff69b4, #c71585); /* Gradient màu hồng */
+    color: #ffffff; /* Màu chữ chính (màu trắng) */
+    min-height: 100vh; /* Đảm bảo body chiếm toàn bộ chiều cao màn hình */
+}
+
+/* Header */
+header {
+    background-color: rgba(199, 21, 133, 0.8); /* Màu nền header (màu hồng đậm với độ trong suốt) */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Màu nền section (màu trắng với độ trong suốt) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+section h2 {
+    color: #c71585; /* Màu tiêu đề section (màu hồng đậm) */
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #333; /* Màu chữ nội dung (màu đen) */
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px; /* Cố định chiều cao cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border: 5px solid #c71585; /* Khung hình ảnh (màu hồng đậm) */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột qua ảnh */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+}
+
+/* Lightbox */
+.lightbox {
+    display: none; /* Ẩn lightbox ban đầu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Nền đen mờ */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Đảm bảo lightbox hiển thị trên cùng */
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(199, 21, 133, 0.8); /* Màu nền footer (màu hồng đậm với độ trong suốt) */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1em;
+}
